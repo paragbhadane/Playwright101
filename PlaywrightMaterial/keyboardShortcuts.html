@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Copy-Paste via Keyboard Shortcuts Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 40px;
+    }
+
+    .container-wrapper {
+      display: flex;
+      gap: 30px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .container h3 {
+      margin: 0;
+      text-align: center;
+      color: #333;
+    }
+
+    textarea {
+      width: 500px;
+      height: 200px;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      resize: none;
+      font-family: Arial, sans-serif;
+    }
+
+    #result {
+      margin-top: 30px;
+      font-size: 15px;
+      color: #333;
+    }
+.edit-box {
+  width: 700px;
+  height: 200px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  overflow-y: auto;
+  background-color: #fff;
+}
+  </style>
+</head>
+<body>
+
+  <h2>Vidyarthi Panch Lakshnam - Chanakya Niti</h2>
+
+  <div class="container-wrapper">
+
+    <!-- Source container -->
+<div class="container" id="sourceContainer">
+  <h3>Source</h3>
+  <div id="sourceText" contenteditable="true" class="edit-box">
+    <p>
+      <strong>Kaak Cheshta:</strong> Maintain relentless curiosity and persistent effort to seek knowledge just like a crow.<br><br>
+      <strong>Bako Dhyanam:</strong> Concentrate single-mindedly on your goal, just like a crane waiting for its prey.<br><br>
+      <strong>Shwan Nidra:</strong> Be watchful of your responsibilities, sleep less and stay alert just like a dog.<br><br>
+      <strong>Alpahaari:</strong> Eat light to keep the body active, agile and free from lethargy.<br><br>
+      <strong>Griha Tyagi:</strong> Step out of your comfort zone and home luxuries for the sake of education.
+    </p>
+  </div>
+</div>
+
+    <!-- Target container -->
+    <div class="container" id="targetContainer">
+      <h3>Target</h3>
+      <textarea id="targetText" placeholder="Paste text here..."></textarea>
+    </div>
+
+  </div>
+ <p id="result"></p>
+
+
+  <script>
+    document.getElementById("targetText").addEventListener("input", function () {
+const normalize = str => str.replace(/\s+/g, ' ').trim();
+  const sourceValue = normalize(document.getElementById("sourceText").textContent.trim());
+  const targetValue = normalize(document.getElementById("targetText").value.trim());
+
+  document.getElementById("result").innerText =
+    sourceValue === targetValue
+      ? "Text copied successfully to Target !"
+      : "Text in Target does not match Source yet.";
+});
+</script>
+
+</body>
+</html>

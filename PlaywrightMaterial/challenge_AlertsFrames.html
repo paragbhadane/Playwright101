@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Combined Exercise - Alerts + Frames + Windows</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin-top: 40px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+    iframe {
+      border: 2px solid #4a90e2;
+      border-radius: 6px;
+      width: 350px;
+      height: 150px;
+    }
+    .result {
+      font-size: 14px;
+      color: #333;
+      min-height: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Main Page</h2>
+
+  <!-- 1. Alert directly on main page -->
+  <button id="mainAlertBtn">Show Main Page Alert</button>
+  <p class="result" id="mainAlertResult"></p>
+
+  <!-- 2. Frame containing a confirm dialog -->
+  <h3>Frame with Confirm Dialog</h3>
+  <iframe id="combinedFrame" srcdoc="
+    <html>
+      <body style='font-family:Arial;text-align:center;margin-top:20px;'>
+        <h4>Frame Content</h4>
+        <button id='frameConfirmBtn' onclick=&quot;
+          var result = confirm('Proceed from inside the frame?');
+          document.getElementById('frameConfirmResult').innerText = result ? 'Confirmed inside frame!' : 'Cancelled inside frame!';
+        &quot;>Show Frame Confirm</button>
+        <p id='frameConfirmResult'></p>
+      </body>
+    </html>
+  ">
+  </iframe>
+
+  <!-- 3. Button to open a new window, which itself has a prompt dialog -->
+  <h3>New Window with Prompt Dialog</h3>
+  <button id="openWindowBtn">Open New Window</button>
+
+  <script>
+    // 1. Main page alert
+    document.getElementById("mainAlertBtn").addEventListener("click", function () {
+      alert("This is the main page alert!");
+      document.getElementById("mainAlertResult").textContent = "Main page alert accepted.";
+    });
+
+    // 3. Open a new window with its own prompt-triggering button
+    document.getElementById("openWindowBtn").addEventListener("click", function () {
+      const newWin = window.open("challengeNewWindow.html", "_blank");
+      
+    });
+  </script>
+
+</body>
+</html>

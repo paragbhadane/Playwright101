@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Performance Report</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+
+        .container {
+            width: 600px;
+            margin: auto;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        select {
+            width: 200px;
+            padding: 8px;
+            margin: 10px 0 25px 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        input[type="number"] {
+            width: 100px;
+            padding: 6px;
+        }
+
+        #saveButton {
+            margin-top: 20px;
+            padding: 10px 25px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Student Performance Report</h2>
+
+    <!-- Module Dropdown -->
+    <label for="module">Modules:</label>
+
+    <select id="module">
+        <option value="">-- Select Module --</option>
+        <option value="CCST">CCST</option>
+        <option value="DAI">DAI</option>
+        <option value="HPCSA">HPCSA</option>
+    </select>
+
+    <!-- Student Table -->
+    <table id="studentTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Marks</th>
+            </tr>
+        </thead>
+
+        <tbody id="studentTableBody">
+            <!-- Rows will be populated after module selection -->
+        </tbody>
+    </table>
+
+    <!-- Save Button -->
+    <button id="saveButton">Save</button>
+
+</div>
+
+
+<script>
+
+    // Student names
+    const students = [
+        "Priya",
+        "Ketan",
+        "Radhika",
+        "Anmol"
+    ];
+
+    const moduleDropdown = document.getElementById("module");
+    const tableBody = document.getElementById("studentTableBody");
+    const saveButton = document.getElementById("saveButton");
+
+
+    // Populate table when module is selected
+    moduleDropdown.addEventListener("change", function () {
+
+        const selectedModule = moduleDropdown.value;
+
+        // Clear existing rows
+        tableBody.innerHTML = "";
+
+        // Don't populate table if no module selected
+        if (selectedModule === "") {
+            return;
+        }
+
+        // Create one row for each student
+        students.forEach(function (student) {
+
+            const row = document.createElement("tr");
+
+            // Name column
+            const nameCell = document.createElement("td");
+            nameCell.textContent = student;
+
+            // Marks column
+            const marksCell = document.createElement("td");
+
+            const marksInput = document.createElement("input");
+            marksInput.type = "number";
+            marksInput.min = "0";
+            marksInput.max = "100";
+
+            marksCell.appendChild(marksInput);
+
+            // Add cells to row
+            row.appendChild(nameCell);
+            row.appendChild(marksCell);
+
+            // Add row to table
+            tableBody.appendChild(row);
+        });
+    });
+
+
+    // Save button
+    saveButton.addEventListener("click", function () {
+
+        alert("Records saved");
+
+    });
+
+</script>
+
+</body>
+</html>

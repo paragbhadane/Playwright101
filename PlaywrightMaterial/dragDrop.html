@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Drag and Drop Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 40px;
+    }
+
+    .container-wrapper {
+      display: flex;
+      gap: 40px;
+    }
+
+    .container {
+      width: 220px;
+      min-height: 250px;
+      border: 2px dashed #4a90e2;
+      border-radius: 8px;
+      padding: 15px;
+      background-color: #f7f9fc;
+    }
+
+    .container h3 {
+      margin-top: 0;
+      text-align: center;
+      color: #333;
+    }
+
+    /* Highlight the container being dragged over */
+    .container.drag-over {
+      background-color: #eaf2fd;
+      border-color: #2e74b5;
+    }
+
+    .draggable-item {
+      padding: 10px 15px;
+      margin-bottom: 10px;
+      background-color: #4a90e2;
+      color: white;
+      border-radius: 5px;
+      cursor: grab;
+      text-align: center;
+      user-select: none;
+    }
+
+    .draggable-item:active {
+      cursor: grabbing;
+    }
+
+    #result {
+      margin-top: 30px;
+      font-size: 15px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>JIRA Board Task List</h2>
+
+  <div class="container-wrapper">
+
+    <!-- Source container -->
+    <div class="container" id="sourceContainer">
+      <h3>TO DO</h3>
+      <div class="draggable-item" id="item1" draggable="true">Write Manual Testcases</div>
+      <div class="draggable-item" id="item2" draggable="true">Define Entry and Exit Criteria</div>
+      <div class="draggable-item" id="item3" draggable="true">Write Selenium Tests</div>
+    </div>
+
+    <!-- Target container -->
+    <div class="container" id="targetContainer">
+      <h3>Done</h3>
+    </div>
+
+  </div>
+
+  <p id="result"></p>
+
+  <script>
+    let draggedItem = null;
+
+    // All draggable items
+    document.querySelectorAll(".draggable-item").forEach(item => {
+      item.addEventListener("dragstart", function (e) {
+        draggedItem = e.target;
+        e.dataTransfer.setData("text/plain", e.target.id);
+      });
+    });
+
+    // Both containers act as valid drop zones
+    document.querySelectorAll(".container").forEach(container => {
+      container.addEventListener("dragover", function (e) {
+        e.preventDefault();   // required to allow dropping
+        container.classList.add("drag-over");
+      });
+
+      container.addEventListener("dragleave", function () {
+        container.classList.remove("drag-over");
+      });
+
+      container.addEventListener("drop", function (e) {
+        e.preventDefault();
+        container.classList.remove("drag-over");
+
+        if (draggedItem) {
+          // Capture the item's visible text BEFORE moving it
+        const itemText = draggedItem.textContent.trim();
+
+        // Get the target container's heading text
+        const containerHeading = container.querySelector("h3").textContent.trim();
+
+        container.appendChild(draggedItem);
+
+        document.getElementById("result").innerText =
+          itemText + " moved to " + containerHeading;
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hover Menu Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .navbar {
+      display: flex;
+      gap: 30px;
+      background-color: #2c3e50;
+      padding: 15px 30px;
+      border-radius: 6px;
+    }
+
+    .menu-item {
+      position: relative;
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 5px 10px;
+    }
+
+    .menu-item:hover {
+      background-color: #34495e;
+      border-radius: 4px;
+    }
+
+    /* Submenu hidden by default */
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      min-width: 160px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      z-index: 10;
+    }
+
+    /* Show submenu ONLY when hovering over the parent menu item */
+    .menu-item:hover .submenu {
+      display: block;
+    }
+
+    .submenu a {
+      display: block;
+      padding: 10px 15px;
+      color: #333;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .submenu a:hover {
+      background-color: #f0f0f0;
+    }
+
+    #result {
+      margin-top: 40px;
+      font-size: 15px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Hover Menu Demo</h2>
+
+  <div class="navbar">
+
+    <div class="menu-item" id="productsMenu">
+      Products
+      <div class="submenu" id="productsSubmenu">
+        <a href="#" id="laptopsLink" onclick="showResult('Laptops')">Laptops</a>
+        <a href="#" id="phonesLink" onclick="showResult('Phones')">Phones</a>
+        <a href="#" id="tabletsLink" onclick="showResult('Tablets')">Tablets</a>
+      </div>
+    </div>
+
+    <div class="menu-item" id="servicesMenu">
+      Services
+      <div class="submenu" id="servicesSubmenu">
+        <a href="#" id="supportLink" onclick="showResult('Support')">Support</a>
+        <a href="#" id="trainingLink" onclick="showResult('Training')">Training</a>
+      </div>
+    </div>
+
+    <div class="menu-item" id="aboutMenu">
+      About
+      <div class="submenu" id="aboutSubmenu">
+        <a href="#" id="teamLink" onclick="showResult('Team')">Team</a>
+        <a href="#" id="careersLink" onclick="showResult('Careers')">Careers</a>
+      </div>
+    </div>
+
+  </div>
+
+  <p id="result"></p>
+
+  <script>
+    function showResult(item) {
+      document.getElementById("result").innerText = "You clicked: " + item;
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome</title>
+  <style>
+    body {
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      gap: 20px;
+    }
+
+    /* Spinner */
+    .spinner {
+      width: 50px;
+      height: 50px;
+      border: 6px solid #e0e0e0;
+      border-top: 6px solid #4a90e2;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Content shown after spinner, hidden initially */
+    .content {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .message {
+      font-weight: bold;
+      font-size: 32px;
+      margin: 0;
+    }
+
+    #nameField {
+      padding: 8px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    #nameField:disabled {
+      background-color: #f0f0f0;
+      cursor: not-allowed;
+    }
+
+    #enterNameBtn {
+      padding: 8px 16px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="spinner" id="spinner"></div>
+
+  <div class="content" id="content">
+    <h1 class="message" id="message">Welcome!!</h1>
+    <button id="enterNameBtn">Enter Name</button>
+    <input type="text" id="nameField" placeholder="Enter your name" disabled>
+  </div>
+
+  <script>
+    // Show message after 5 seconds
+    setTimeout(function () {
+      document.getElementById("spinner").style.display = "none";
+      document.getElementById("content").style.display = "flex";
+    }, 5000);
+
+    // Enable the text field when the button is clicked
+    document.getElementById("enterNameBtn").addEventListener("click", function () {
+      document.getElementById("nameField").disabled = false;
+      document.getElementById("nameField").focus();
+    });
+  </script>
+
+</body>
+</html>

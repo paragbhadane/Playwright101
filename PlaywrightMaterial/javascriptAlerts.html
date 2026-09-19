@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dialogs Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin-top: 60px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .result {
+      font-size: 14px;
+      color: #333;
+      min-height: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Dialogs Demo</h2>
+
+  <!-- Simple Alert -->
+  <button id="alertBtn">Show Alert</button>
+  <p class="result" id="alertResult"></p>
+
+  <!-- Confirmation -->
+  <button id="confirmBtn">Show Confirm</button>
+  <p class="result" id="confirmResult"></p>
+
+  <!-- Prompt -->
+  <button id="promptBtn">Show Prompt</button>
+  <p class="result" id="promptResult"></p>
+
+  <script>
+    // Simple alert
+    document.getElementById("alertBtn").addEventListener("click", function () {
+      alert("This is a simple alert!");
+      document.getElementById("alertResult").textContent = "Alert was shown and accepted.";
+    });
+
+    // Confirmation dialog
+    document.getElementById("confirmBtn").addEventListener("click", function () {
+      const result = confirm("Do you want to proceed?");
+      document.getElementById("confirmResult").textContent =
+        result ? "You clicked OK." : "You clicked Cancel.";
+    });
+
+    // Prompt dialog
+    document.getElementById("promptBtn").addEventListener("click", function () {
+      const name = prompt("Please enter your name:", "");
+      if (name !== null) {
+        document.getElementById("promptResult").textContent = "You entered: " + name;
+      } else {
+        document.getElementById("promptResult").textContent = "Prompt was dismissed.";
+      }
+    });
+  </script>
+
+</body>
+</html>

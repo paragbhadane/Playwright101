@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavascriptExecutor Demo - Scroll & Hidden Click</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .spacer {
+      height: 900px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #999;
+      font-size: 14px;
+    }
+
+    .target-section {
+      padding: 40px;
+      text-align: center;
+      background-color: #4a90e2;
+      color: white;
+      width: 100%;
+    }
+
+    #scrollTargetBtn {
+      padding: 6px 12px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 6px;
+      background-color: #fff;
+      color: #4a90e2;
+      font-weight: bold;
+    }
+
+    /* Hidden button - display:none, cannot be clicked normally */
+    #hiddenBtn {
+      display: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 6px;
+      background-color: #e74c3c;
+      color: white;
+      margin-top: 20px;
+    }
+
+    #result {
+      margin-top: 30px;
+      font-size: 15px;
+      color: #333;
+      padding-bottom: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="spacer"> Scroll down to find the TREASURE! </div>
+
+  <div class="target-section">
+    <h2>You found the treasure path!</h2>
+    <button id="scrollTargetBtn">Treasure</button>
+
+    <!-- This button is never visible via normal CSS, only clickable via JS -->
+    <button id="hiddenBtn">Hey Your Trasure will be at your doorstep, wait until TOMORROW !</button>
+  </div>
+
+  <p id="result"></p>
+
+  <script>
+    document.getElementById("scrollTargetBtn").addEventListener("click", function () {
+      document.getElementById("result").innerText = "Better Luck Next Time :-) ";
+    });
+
+    document.getElementById("hiddenBtn").addEventListener("click", function () {
+      document.getElementById("result").innerText = "Hey Your Trasure will be at your doorstep, wait until TOMORROW !";
+    });
+  </script>
+
+</body>
+</html>

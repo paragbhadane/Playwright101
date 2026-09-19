@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Right-Click Context Menu Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 60px;
+    }
+
+    .target-box {
+      width: 300px;
+      height: 150px;
+      background-color: #4a90e2;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+      border-radius: 8px;
+      user-select: none;
+    }
+
+    /* Custom context menu, hidden by default */
+    .context-menu {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      min-width: 150px;
+      z-index: 100;
+    }
+
+    .context-menu ul {
+      list-style: none;
+      margin: 0;
+      padding: 5px 0;
+    }
+
+    .context-menu li {
+      padding: 10px 15px;
+      cursor: pointer;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .context-menu li:hover {
+      background-color: #f0f0f0;
+    }
+
+    #result {
+      margin-top: 30px;
+      font-size: 15px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Right-Click Context Menu Demo</h2>
+
+  <div class="target-box" id="targetBox">Right-click here</div>
+
+  <!-- Custom context menu -->
+  <div class="context-menu" id="contextMenu">
+    <ul>
+      <li id="copyOption">Copy</li>
+      <li id="pasteOption">Paste</li>
+      <li id="deleteOption">Delete</li>
+      <li id="refreshOption">Refresh</li>
+    </ul>
+  </div>
+
+  <p id="result"></p>
+
+  <script>
+    const targetBox = document.getElementById("targetBox");
+    const contextMenu = document.getElementById("contextMenu");
+    const result = document.getElementById("result");
+
+    // Show custom menu on right-click, at the cursor position
+    targetBox.addEventListener("contextmenu", function (e) {
+      e.preventDefault();   // stop the browser's default right-click menu
+
+      contextMenu.style.top = e.pageY + "px";
+      contextMenu.style.left = e.pageX + "px";
+      contextMenu.style.display = "block";
+    });
+
+    // Hide the menu if user clicks anywhere else
+    document.addEventListener("click", function () {
+      contextMenu.style.display = "none";
+    });
+
+    // Handle menu option clicks
+    document.getElementById("copyOption").addEventListener("click", function () {
+      result.innerText = "You selected: Copy";
+    });
+    document.getElementById("pasteOption").addEventListener("click", function () {
+      result.innerText = "You selected: Paste";
+    });
+    document.getElementById("deleteOption").addEventListener("click", function () {
+      result.innerText = "You selected: Delete";
+    });
+    document.getElementById("refreshOption").addEventListener("click", function () {
+      result.innerText = "You selected: Refresh";
+    });
+  </script>
+
+</body>
+</html>

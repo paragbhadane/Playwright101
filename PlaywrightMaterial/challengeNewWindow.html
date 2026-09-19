@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<html>
+          <head><title>New Window</title></head>
+          <body style="font-family:Arial;text-align:center;margin-top:60px;">
+            <h2>This is a New Window</h2>
+            <button id="newWindowPromptBtn">Show Prompt</button>
+            <p id="newWindowResult"></p>
+            <script>
+              document.getElementById("newWindowPromptBtn").addEventListener("click", function () {
+                const name = prompt("Enter your name from the new window:", "");
+                document.getElementById("newWindowResult").innerText =
+                  name !== null ? "You entered: " + name : "Prompt was dismissed.";
+              });
+            </script>
+          </body>
+        </html>

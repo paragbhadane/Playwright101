@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Scroll And Win Lottery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .navbar {
+      display: flex;
+      gap: 30px;
+      background-color: #2c3e50;
+      padding: 15px 30px;
+      border-radius: 6px;
+      margin-top: 30px;
+    }
+
+    .menu-item {
+      position: relative;
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 5px 10px;
+    }
+
+    .menu-item:hover {
+      background-color: #34495e;
+      border-radius: 4px;
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      min-width: 180px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      z-index: 10;
+    }
+
+    .menu-item:hover .submenu {
+      display: block;
+    }
+
+    .submenu a {
+      display: block;
+      padding: 10px 15px;
+      color: #333;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .submenu a:hover {
+      background-color: #f0f0f0;
+    }
+
+    .spacer {
+      height: 700px;
+      width: 100%;
+      background: repeating-linear-gradient(
+        180deg, #f7f9fc, #f7f9fc 40px, #eef1f6 40px, #eef1f6 80px
+      );
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #999;
+      font-size: 14px;
+    }
+
+    .upload-section {
+      background-color: #4a90e2;
+      color: white;
+      width: 100%;
+      padding: 50px;
+      text-align: center;
+    }
+
+    .upload-box {
+      background-color: white;
+      border-radius: 8px;
+      padding: 30px;
+      display: inline-block;
+      color: #333;
+    }
+
+    input[type="file"] {
+      margin: 15px 0;
+      font-size: 14px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 15px;
+      cursor: pointer;
+      background-color: #4a90e2;
+      color: white;
+      border: none;
+      border-radius: 6px;
+    }
+
+    .upload-box button {
+      background-color: #27ae60;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    #stepLog {
+      margin-top: 30px;
+      padding-bottom: 60px;
+      font-size: 13px;
+      color: #555;
+      max-width: 400px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Step 1: Hover menu -->
+  <div class="navbar">
+    <div class="menu-item" id="documentsMenu">
+      Documents
+      <div class="submenu" id="documentsSubmenu">
+        <a href="#" id="uploadDocLink">Upload Document</a>
+        <a href="#" id="viewDocLink">View Documents</a>
+      </div>
+    </div>
+    <div class="menu-item" id="settingsMenu">
+      Settings
+      <div class="submenu" id="settingsSubmenu">
+        <a href="#" id="profileLink">Profile</a>
+        <a href="#" id="preferencesLink">Preferences</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Step 2: Long spacer to force scrolling -->
+  <div class="spacer">Scroll And Win Lottery</div>
+
+  <!-- Step 3 & 4: Scroll target + file upload -->
+  <div class="upload-section" id="uploadSection">
+    <h2>Upload Section</h2>
+    <div class="upload-box">
+      <p>Upload Your Aadhar Card and other PII</p>
+      <input type="file" id="fileInput">
+      <p id="fileName"></p>
+      <br>
+      <button id="uploadBtn">Upload</button>
+    </div>
+    <p id="result"></p>
+  </div>
+
+  <div id="stepLog"></div>
+
+  <script>
+    const log = document.getElementById("stepLog");
+
+    function addLog(step) {
+      const p = document.createElement("p");
+      p.innerText = step;
+      log.appendChild(p);
+    }
+
+    // Hover menu link clicks
+    document.getElementById("uploadDocLink").addEventListener("click", function (e) {
+      e.preventDefault();
+      addLog("Step 1: 'Upload Document' clicked from hover menu.");
+      document.getElementById("uploadSection").scrollIntoView({ behavior: "smooth" });
+    });
+
+    document.getElementById("viewDocLink").addEventListener("click", function (e) {
+      e.preventDefault();
+      addLog("'View Documents' clicked.");
+    });
+
+    document.getElementById("profileLink").addEventListener("click", function (e) {
+      e.preventDefault();
+      addLog("'Profile' clicked.");
+    });
+
+    document.getElementById("preferencesLink").addEventListener("click", function (e) {
+      e.preventDefault();
+      addLog("'Preferences' clicked.");
+    });
+
+    // File selection
+    const fileInput = document.getElementById("fileInput");
+    fileInput.addEventListener("change", function () {
+      if (fileInput.files.length > 0) {
+        document.getElementById("fileName").innerText = "Selected file: " + fileInput.files[0].name;
+        addLog("Step 3: File selected - " + fileInput.files[0].name);
+      }
+    });
+
+    // Upload button
+    document.getElementById("uploadBtn").addEventListener("click", function () {
+      if (fileInput.files.length > 0) {
+        document.getElementById("result").innerText =
+          "You greedy fellow !!";
+        addLog("Step 4: Upload button clicked - upload confirmed.");
+      } else {
+        document.getElementById("result").innerText = "Please select a file before uploading.";
+      }
+    });
+  </script>
+
+</body>
+</html>

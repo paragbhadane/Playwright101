@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quote</title>
+  <style>
+    body {
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      gap: 20px;
+    }
+
+    .spinner {
+      width: 50px;
+      height: 50px;
+      border: 6px solid #e0e0e0;
+      border-top: 6px solid #4a90e2;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .content {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .message {
+      font-weight: bold;
+      font-size: 32px;
+      margin: 0;
+    }
+
+    #loadQuoteBtn {
+      padding: 8px 16px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    /* AJAX section */
+    #quoteBox {
+      max-width: 400px;
+      min-height: 40px;
+      text-align: center;
+      font-style: italic;
+      color: #333;
+      border: 1px dashed #ccc;
+      padding: 10px;
+      border-radius: 6px;
+      display: none;
+    }
+
+    #quoteLoading {
+      display: none;
+      color: #888;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="spinner" id="spinner"></div>
+
+  <div class="content" id="content">
+    <h1 class="message" id="message">Welcome!!</h1>
+
+    <!-- AJAX control -->
+    <button id="loadQuoteBtn">Load Quote</button>
+    <p id="quoteLoading">Fetching quote...</p>
+    <p id="quoteBox"></p>
+  </div>
+
+  <script>
+    // Show content after spinner
+    setTimeout(function () {
+      document.getElementById("spinner").style.display = "none";
+      document.getElementById("content").style.display = "flex";
+    }, 5000);
+
+    // Real AJAX call — fetch a random joke from a public API
+    document.getElementById("loadQuoteBtn").addEventListener("click", function () {
+      const quoteBox = document.getElementById("quoteBox");
+      const loadingText = document.getElementById("quoteLoading");
+
+      quoteBox.style.display = "none";
+      quoteBox.textContent = "";
+      loadingText.style.display = "block";
+
+      fetch("https://official-joke-api.appspot.com/random_joke")
+        .then(response => response.json())
+        .then(data => {
+          loadingText.style.display = "none";
+          quoteBox.textContent = data.setup + " — " + data.punchline;
+          quoteBox.style.display = "block";
+        })
+        .catch(error => {
+          loadingText.style.display = "none";
+          quoteBox.textContent = "Failed to load quote.";
+          quoteBox.style.display = "block";
+        });
+    });
+  </script>
+
+</body>
+</html>
