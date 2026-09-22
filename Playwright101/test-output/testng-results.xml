@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-09-22T17:54:54 IST" name="CCST_Suite1" finished-at="2026-09-22T17:55:11 IST" duration-ms="16927">
+    <groups>
+    </groups>
+    <test started-at="2026-09-22T17:54:54 IST" name="SmokeTests" finished-at="2026-09-22T17:55:11 IST" duration-ms="16927">
+      <class name="Assertions_py.SauceTestnn">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Assertions_py.SauceTestnn@128d2484]" started-at="2026-09-22T17:55:06 IST" name="setUp" finished-at="2026-09-22T17:55:08 IST" duration-ms="2226" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testLoginSuccessful()[pri:0, instance:Assertions_py.SauceTestnn@128d2484]" started-at="2026-09-22T17:55:08 IST" name="testLoginSuccessful" finished-at="2026-09-22T17:55:09 IST" duration-ms="509" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginSuccessful -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Assertions_py.SauceTestnn@128d2484]" started-at="2026-09-22T17:55:09 IST" name="tearDown" finished-at="2026-09-22T17:55:11 IST" duration-ms="2530" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Assertions_py.SauceTestnn -->
+      <class name="Assertions_py.Assert_py">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Assertions_py.Assert_py@5876a9af]" started-at="2026-09-22T17:54:54 IST" name="setUp" finished-at="2026-09-22T17:54:59 IST" duration-ms="4964" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testBoxEnable()[pri:0, instance:Assertions_py.Assert_py@5876a9af]" started-at="2026-09-22T17:54:59 IST" name="testBoxEnable" finished-at="2026-09-22T17:55:05 IST" duration-ms="5390" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBoxEnable -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Assertions_py.Assert_py@5876a9af]" started-at="2026-09-22T17:55:05 IST" name="tearDown" finished-at="2026-09-22T17:55:06 IST" duration-ms="1254" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Assertions_py.Assert_py -->
+    </test> <!-- SmokeTests -->
+  </suite> <!-- CCST_Suite1 -->
+</testng-results>

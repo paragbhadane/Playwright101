@@ -1,6 +1,8 @@
 package Day2;
 
 import com.microsoft.playwright.*;
+import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
+
 
 import java.util.Arrays;
 
@@ -17,9 +19,9 @@ public class setlocalandTimezone {
 
             BrowserContext obj_context = obj_browser.newContext(
                     new Browser.NewContextOptions()
-                            //.setLocale("ja-JP")
-                            .setTimezoneId("Australia/Sydney")
-                            .setViewportSize(null)
+                            .setLocale("ja-JP")
+                            //.setTimezoneId("Australia/Sydney")
+                            //.setViewportSize(null)
             );
 
             Page obj_page = obj_context.newPage();
@@ -30,12 +32,13 @@ public class setlocalandTimezone {
             );
             System.out.println("Browser Time Zone: " + browserTimezone);
 
-
-
             obj_page.navigate("https://www.wikipedia.org/");
             Thread.sleep(5000);
 
             Locator obj_langLabel = obj_page.locator("#jsLangLabel");
+
+            assertThat(obj_langLabel).hasText("ja");
+
             String langValue = obj_langLabel.textContent();
             System.out.println("Language Label: " + langValue);
 

@@ -1,0 +1,7 @@
+<suite name="CCST_Suite1" verbose="1">
+        <classes>
+            <class name="Assertions_py.Assert_py"/>
+            <class name="Assertions_py.SauceTestnn"/>
+        </classes>
+
+</suite>
