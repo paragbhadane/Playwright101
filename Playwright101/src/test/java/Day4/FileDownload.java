@@ -1,11 +1,12 @@
 package Day4;
 
 import com.microsoft.playwright.*;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class FileDownload {
     public static void main(String[] args) throws IOException, InterruptedException {
@@ -43,6 +44,7 @@ public class FileDownload {
                     System.out.println("FAIL: Downloaded file not found at expected location");
                 }
 
+                assertThat(Files.exists(savePath)).isTrue();
             } catch (Exception e) {
                 e.printStackTrace();
             }finally {
