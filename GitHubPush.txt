@@ -1,0 +1,3 @@
+git add .
+git commit -m "Add video recording assertion tests and updates"
+git push origin main
