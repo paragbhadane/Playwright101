@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>File Download Test Page</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        max-width: 500px;
+        margin: 60px auto;
+        text-align: center;
+    }
+    h2 {
+        color: #333;
+    }
+    #downloadBtn {
+        padding: 12px 24px;
+        font-size: 16px;
+        background-color: #2e7d32;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+    #downloadBtn:hover {
+        background-color: #1b5e20;
+    }
+    #status {
+        margin-top: 20px;
+        font-size: 14px;
+        color: #555;
+    }
+</style>
+</head>
+<body>
+
+<h2>File Download Test</h2>
+<p>Click the button below to download a sample file.</p>
+
+<!--
+    The anchor uses a data: URI so the file is generated entirely client-side
+    (no server needed). The "download" attribute forces the browser to treat
+    this as a real file download instead of navigating to/opening the content,
+    which is exactly what Playwright's page.waitForDownload() listens for.
+-->
+<a id="downloadLink"
+   href="data:text/plain;charset=utf-8,This%20is%20a%20sample%20file%20for%20download%20testing.%0AGenerated%20for%20Playwright%20automation."
+   download="sample.txt"
+   style="text-decoration:none;">
+    <button id="downloadBtn">Download Sample File</button>
+</a>
+
+<p id="status"></p>
+
+<script>
+    document.getElementById('downloadLink').addEventListener('click', function () {
+        document.getElementById('status').innerText = 'Download triggered: sample.txt';
+    });
+</script>
+
+</body>
+</html>

@@ -2,6 +2,8 @@
         <classes>
             <class name="Assertions_py.Assert_py"/>
             <class name="Assertions_py.SauceTestnn"/>
+            <class name="Day4.FrampyAssets"/>
+
         </classes>
 
 </suite>
