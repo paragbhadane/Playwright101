@@ -1,12 +1,16 @@
 package Day1_Setup;
 
 import com.microsoft.playwright.*;
+import com.microsoft.playwright.Tracing;
+
+import java.nio.file.Paths;
 
 public class Locators {
-    //id pass
+    // Credentials
     static String username = "standard_user";
     static String password = "secret_sauce";
-    //locator
+
+    // Locators
     static String XpathLoginbutton = "//input[@id='login-button']";
     static String cssLoginButton = "#login-button";
     static String idUsername = "#user-name";
@@ -22,16 +26,21 @@ public class Locators {
                     new BrowserType.LaunchOptions().setHeadless(false)
             );
 
-            Page obj_page = obj_browser.newPage();
+            BrowserContext obj_context = obj_browser.newContext();
+
+            obj_context.tracing().start(new Tracing.StartOptions()
+                    .setScreenshots(true)
+                    .setSnapshots(true)
+                    .setSources(true));
+
+            Page obj_page = obj_context.newPage();
 
             try {
                 obj_page.navigate("https://www.saucedemo.com");
-                Thread.sleep(2000);
 
                 obj_page.locator(idUsername).fill(username);
                 obj_page.locator(id_password).fill(password);
                 obj_page.locator(cssLoginButton).click();
-                Thread.sleep(2000);
 
                 String pageTitle = obj_page.title();
                 if (pageTitle.equals("Swag Labs")) {
@@ -39,11 +48,13 @@ public class Locators {
                 } else {
                     System.out.println("Failed Login");
                 }
-                Thread.sleep(2000);
 
             } catch (Exception e) {
                 e.printStackTrace();
             } finally {
+                obj_context.tracing().stop(new Tracing.StopOptions()
+                        .setPath(Paths.get("D:\\trace.zip")));
+
                 obj_browser.close();
             }
         }

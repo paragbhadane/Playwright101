@@ -21,21 +21,19 @@ public class AssignMouseKeyboardActions {
 
             obj_page.navigate("file:///C:/Users/ccst/Desktop/Playwright/PlaywrightMaterial/challenge_MouseKeyboardActions.html");
 
-            //------Product Laptop
+            //------Upload Documents
             obj_page.locator("#documentsMenu").hover();
             obj_page.locator("#uploadDocLink").click();
             Thread.sleep(2000);
-            // Locator resultLocator = obj_page.locator("#result");
-            // assertThat(resultLocator).hasText("You clicked: Laptops");
             //--------------------------------------------
 
             //--------FileUpload
             String filepath = "C:/Users/ccst/Desktop/Playwright/PlaywrightMaterial/fileUpload.html";
             obj_page.setInputFiles("#fileInput", Paths.get(filepath));
             obj_page.locator("#uploadBtn").click();
+
             Locator Result = obj_page.locator("#result");
             assertThat(Result).containsText("You greedy fellow !!");
-            Result.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));
             System.out.println("Result text: " + Result.textContent());
 
         }
