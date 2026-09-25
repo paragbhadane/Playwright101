@@ -1,0 +1,35 @@
+package Day6;
+
+import com.microsoft.playwright.*;
+import com.microsoft.playwright.options.MouseButton;
+import com.microsoft.playwright.options.SelectOption;
+
+public class HerokuContextMenu {
+    public static void main(String[] args) throws InterruptedException {
+
+        try (Playwright obj_playwright = Playwright.create()) {
+
+            Browser obj_browser = obj_playwright.chromium().launch(
+                    new BrowserType.LaunchOptions().setHeadless(false).setSlowMo(1000)
+            );
+
+            BrowserContext obj_context = obj_browser.newContext();
+            Page obj_page = obj_context.newPage();
+
+            obj_page.navigate("https://the-internet.herokuapp.com/");
+
+            obj_page.locator("//a[@href='/context_menu']").click();
+            Locator mouse = obj_page.locator("#hot-spot");
+
+            mouse = new Locator.ClickOptions().setButton(MouseButton.RIGHT);
+
+
+
+            obj_page.onDialog(dialog -> {
+                System.out.println("dialog message: " + dialog.message());
+                dialog.accept();
+            });
+            Thread.sleep(5000);
+        }
+    }
+}
