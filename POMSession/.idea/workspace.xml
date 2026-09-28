@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4d075095-45be-4b53-909f-9ff18a77312b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Day7/LoginSession.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/base/BaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/config/TestConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/setup/GlobalAuthSetup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/setup/GlobalSetupTestNG.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/DashboardTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testNG.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Playwright101/SauceDemoTestNggDifferentClass.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Playwright101/SegregationfileSauce.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Playwright101/SegregationfileSauce.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Playwright101/page.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Playwright101/page.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Playwright101/src/test/java/Assertions_py/ScreenshotTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Playwright101/src/test/java/Assertions_py/ScreenshotTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Playwright101/src/test/java/Day4/assignKeyboardsShortcutcopypaste.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Playwright101/src/test/java/Day4/assignKeyboardsShortcutcopypaste.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Playwright101/src/test/java/Day5/AutomateInDifferentClass/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Playwright101/src/test/java/Day5/AutomateInDifferentClass/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Playwright101/src/test/java/Day5/SegregationFile/TestLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Playwright101/src/test/java/Day5/SegregationFile/TestLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Playwright101/src/test/java/Day6/HerokuContextMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Playwright101/src/test/java/Day6/HerokuContextMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Playwright101/test-output/CCST_Suite1/Day5_Tests.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Playwright101/test-output/CCST_Suite1/Day5_Tests.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Playwright101/test-output/CCST_Suite1/Day5_Tests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Playwright101/test-output/CCST_Suite1/Day5_Tests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Playwright101/test-output/emailable-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Playwright101/test-output/emailable-report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Playwright101/test-output/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Playwright101/test-output/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Playwright101/test-output/junitreports/TEST-Day5.SegregationFile.TestLogin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Playwright101/test-output/junitreports/TEST-Day5.SegregationFile.TestLogin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Playwright101/test-output/testng-results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Playwright101/test-output/testng-results.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_C:/Users/ccst/Desktop/Playwright/POMSession" value="3JwPkwdqkTiVMthqUe6f0fm9rN4" />
+    </persistenceIdMap>
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="10" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;paragbhadane&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/paragbhadane/Playwright101.git&quot;,
+    &quot;accountId&quot;: &quot;43e5d7a5-2c0f-4a54-b862-48c04d5cce68&quot;
+  }
+}</component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0000000000000702" />
+      <entry key="S5" value="1.0000054761750696" />
+      <entry key="S10" value="1.0023401228749016" />
+      <entry key="S30" value="1.1327637631816292" />
+      <entry key="S60" value="1.3643676235902833" />
+      <entry key="M2" value="1.603797131680119" />
+      <entry key="M5" value="2.0322681841514774" />
+      <entry key="M10" value="5.5275541962033286" />
+      <entry key="M15" value="12.768236089861768" />
+      <entry key="M30" value="38.73145676503937" />
+      <entry key="H1" value="73.72423337608497" />
+      <entry key="H2" value="103.78992242352415" />
+      <entry key="H4" value="123.74463934773215" />
+      <entry key="D1" value="143.61910645856398" />
+      <entry key="W1" value="147.36529713484515" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0021671278751325086" />
+      <entry key="MS500" value="0.29320873730796965" />
+      <entry key="S2" value="0.7358583578128078" />
+      <entry key="S5" value="0.8845404353315406" />
+      <entry key="S10" value="0.9405000985281929" />
+      <entry key="S30" value="0.9797597976233297" />
+      <entry key="S60" value="0.989828169966778" />
+      <entry key="M2" value="0.9950738727786115" />
+      <entry key="M5" value="1.1504073477729317" />
+      <entry key="M10" value="3.0377489897188776" />
+      <entry key="M15" value="6.429620892880466" />
+      <entry key="M30" value="17.134777782965823" />
+      <entry key="H1" value="30.402077792939252" />
+      <entry key="H2" value="41.343415334520486" />
+      <entry key="H4" value="48.46160646663885" />
+      <entry key="D1" value="55.46587453626903" />
+      <entry key="W1" value="56.77793981901933" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.9395454012460343" />
+      <entry key="MS500" value="1.1053672706834736" />
+      <entry key="S2" value="1.5826937782621187" />
+      <entry key="S5" value="1.8061834840482855" />
+      <entry key="S10" value="1.900281660256237" />
+      <entry key="S30" value="2.097474708205332" />
+      <entry key="S60" value="2.3465161906974736" />
+      <entry key="M2" value="2.594976903364426" />
+      <entry key="M5" value="3.180311153574588" />
+      <entry key="M10" value="8.557593764573125" />
+      <entry key="M15" value="19.183361474653317" />
+      <entry key="M30" value="55.841989776325114" />
+      <entry key="H1" value="104.10266221000714" />
+      <entry key="H2" value="145.11655074262163" />
+      <entry key="H4" value="172.1962043380275" />
+      <entry key="D1" value="199.08303378773894" />
+      <entry key="W1" value="204.14295141268767" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3JwPketMSjwhgemvNRPbDz8eVWx" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.LoginSession.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "TestNG.C:/Users/ccst/Desktop/Playwright/POMSession/testNG.xml.executor": "Run",
+    "TestNG.Unnamed.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "copilot.chat.legacySessionMetadata.migrated": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "to.speed.mode.migration.done": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ccst\Desktop\Playwright\POMSession" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.C:/Users/ccst/Desktop/Playwright/POMSession/testNG.xml">
+    <configuration name="C:/Users/ccst/Desktop/Playwright/POMSession/testNG.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="PYAuthDemo" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testNG.xml" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="USE_DEFAULT_REPORTERS" value="true" />
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Unnamed" type="TestNG" nameIsGenerated="true">
+      <module name="PYAuthDemo" />
+      <shortenClasspath name="NONE" />
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="true" />
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="TestNG.Unnamed" />
+      <item itemvalue="TestNG.C:/Users/ccst/Desktop/Playwright/POMSession/testNG.xml" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.C:/Users/ccst/Desktop/Playwright/POMSession/testNG.xml" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.26222.65" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.26222.65" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4d075095-45be-4b53-909f-9ff18a77312b" name="Changes" comment="" />
+      <created>1790569303423</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1790569303423</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

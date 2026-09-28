@@ -16,6 +16,7 @@ public class assignKeyboardsShortcutcopypaste {
             );
 
             BrowserContext obj_context = obj_browser.newContext();
+            
             Page obj_page = obj_context.newPage();
 
             obj_page.navigate("file:///C:/Users/ccst/Desktop/Playwright/PlaywrightMaterial/keyboardShortcuts.html");

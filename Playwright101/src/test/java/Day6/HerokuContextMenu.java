@@ -21,7 +21,6 @@ public class HerokuContextMenu {
             obj_page.locator("//a[@href='/context_menu']").click();
             Locator mouse = obj_page.locator("#hot-spot");
 
-            mouse = new Locator.ClickOptions().setButton(MouseButton.RIGHT);
 
 
 

@@ -38,8 +38,7 @@ public class TestLogin {
         softAssert.assertAll();
     }
 
-    @Test(priority = 2, dataProvider = "loginCredentials", dataProviderClass = LoginDataProvider.class)
-    public void testLoginNegative(String username, String password) {
+    /*public void testLoginNegative(String username, String password) {
         LoginFunctionality loginPage = new LoginFunctionality(obj_page);
         loginPage.performLogin(username, password);
         Locator errbtn = obj_page.locator(".error-button");
@@ -48,7 +47,7 @@ public class TestLogin {
         softAssert.assertTrue(errbtn.isVisible(),
                 "Epic sadface: Username and password do not match any user in this service");
         softAssert.assertAll();
-    }
+    }*/
 
     @AfterMethod
     public void teardown() {

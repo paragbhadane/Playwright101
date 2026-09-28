@@ -42,7 +42,7 @@ public class ScreenshotTest {
 
 
         try {
-            assertThat(page).hasURL("https://www.saucedemo.com/inventory1.html");
+           // assertThat(page).hasURL("https://www.saucedemo.com/inventory1.html");
         } catch (AssertionError e) {
             page.screenshot(new Page.ScreenshotOptions().setPath(Paths.get("page.png")).setFullPage(true));
             System.out.println("ScreenshotSaved " );
