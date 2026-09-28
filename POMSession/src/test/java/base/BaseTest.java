@@ -25,7 +25,7 @@ public class BaseTest {
                         .setStorageStatePath(Paths.get(TestConfig.USER_STATE)));
         page = context.newPage();
     }
-@AfterMethod
+    @AfterMethod
     public void tearDown(){
         if(context != null) context.close();
     if(browser != null) browser.close();

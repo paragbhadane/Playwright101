@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="CCST_Suite111" verbose="1">
+    <test name="Day5_Tests">
+        <classes>
+
+            <class name="setup.GlobalAuthSetup"/>
+            <class name="tests.LoginTest"/>
+            <class name="tests.AddToCartTest"/>
+            <class name="tests.TestCheckout"/>
+            <class name="tests.TestLogout"/>
+
+
+
+        </classes>
+    </test>
+</suite>

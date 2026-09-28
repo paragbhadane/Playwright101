@@ -3,34 +3,18 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BackgroundAgentGlobalSettings">
+    <option name="selectedModelId" value="auto" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="4d075095-45be-4b53-909f-9ff18a77312b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Day7/LoginSession.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/base/BaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/config/TestConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/setup/GlobalAuthSetup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/setup/GlobalSetupTestNG.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/DashboardTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testNG.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Playwright101/SauceDemoTestNggDifferentClass.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Playwright101/SegregationfileSauce.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Playwright101/SegregationfileSauce.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Playwright101/page.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Playwright101/page.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Playwright101/src/test/java/Assertions_py/ScreenshotTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Playwright101/src/test/java/Assertions_py/ScreenshotTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Playwright101/src/test/java/Day4/assignKeyboardsShortcutcopypaste.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Playwright101/src/test/java/Day4/assignKeyboardsShortcutcopypaste.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Playwright101/src/test/java/Day5/AutomateInDifferentClass/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Playwright101/src/test/java/Day5/AutomateInDifferentClass/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Playwright101/src/test/java/Day5/SegregationFile/TestLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Playwright101/src/test/java/Day5/SegregationFile/TestLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Playwright101/src/test/java/Day6/HerokuContextMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Playwright101/src/test/java/Day6/HerokuContextMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Playwright101/test-output/CCST_Suite1/Day5_Tests.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Playwright101/test-output/CCST_Suite1/Day5_Tests.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Playwright101/test-output/CCST_Suite1/Day5_Tests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Playwright101/test-output/CCST_Suite1/Day5_Tests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Playwright101/test-output/emailable-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Playwright101/test-output/emailable-report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Playwright101/test-output/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Playwright101/test-output/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Playwright101/test-output/junitreports/TEST-Day5.SegregationFile.TestLogin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Playwright101/test-output/junitreports/TEST-Day5.SegregationFile.TestLogin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Playwright101/test-output/testng-results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Playwright101/test-output/testng-results.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POM/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POM/src/test/java/base/BaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POM/src/test/java/setup/GlobalAuthSetup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POM/src/test/java/tests/LoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/DashboardTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/DashboardTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
